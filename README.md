@@ -37,7 +37,7 @@ Navigate to the server directory and install dependencies.
 1. Open Terminal and Navigate:
 
 ```bash
-cd veado-temp-tracker/temp-tracker-server
+cd veadotube-temp-tracker/temp-tracker-server
 Install Dependencies:
 ```
 2. Install Dependencies
