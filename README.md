@@ -53,7 +53,7 @@ Navigate to the web application directory and set it up.
 1. Open a New Terminal and Navigate:
 
 ```bash
-cd veado-temp-tracker/temp-tracker-webapps
+cd veadotube-temp-tracker/temp-tracker-webapps
 ```
 2. Install Dependencies:
 
@@ -74,7 +74,7 @@ Also in server.js, change the name of the states for veadotube to match what you
 NOTE: You will also need to change the websocket port if you didn't set that to 8000. These are clearly marked in both the server and web applications.
 
 ### Starting the Applications
-From the root directory (veado-temp-tracker), run:
+From the root directory (veadotube-temp-tracker), run:
 
 ```bash
 npm start
