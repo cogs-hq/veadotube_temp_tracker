@@ -1,0 +1,43 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-Time Temperature Updates</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    h1 { font-size: 24px; }
+    #temperature { font-size: 48px; color: #ff5722; }
+  </style>
+</head>
+<body>
+  <h1>Current Temperature:</h1>
+  <div id="temperature">Loading...</div>
+
+  <script>
+    const temperatureElement = document.getElementById('temperature');
+
+    // Connect to the WebSocket server
+    const socket = new WebSocket('ws://localhost:8000');
+
+    socket.addEventListener('open', function () {
+      console.log('WebSocket connection established');
+    });
+
+    socket.addEventListener('message', function (event) {
+      const data = JSON.parse(event.data);
+      if (data.temperature !== undefined) {
+        temperatureElement.textContent = data.temperature + '°C';
+      }
+    });
+
+    socket.addEventListener('error', function (error) {
+      console.error('WebSocket error:', error);
+    });
+
+    socket.addEventListener('close', function () {
+      console.log('WebSocket connection closed');
+    });
+  </script>
+</body>
+</html>

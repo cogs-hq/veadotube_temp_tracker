@@ -1,0 +1,19 @@
+.temperature-container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    /* background-color: #a0522d; /* Oak brown background color */
+    color: #ffffff; /* White text for contrast */
+    /* border: 2px solid #000; */
+    box-sizing: border-box;
+  }
+  
+  .temperature-loading {
+    font-size: 36px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,49 @@
+.digital-temperature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .digital-temperature-display {
+    background-color: transparent;
+    padding: 20px 40px;
+    border-radius: 10px;
+  }
+  
+  .temperature-value {
+    font-size: 48px;
+    color: rgb(106, 65, 73);
+    text-shadow:
+      -1px -1px 0 #fffff0,
+      1px -1px 0 #fffff0,
+      -1px 1px 0 #fffff0,
+      1px 1px 0 #fffff0;
+    font-family: "Shantell Sans", serif; /* Fancy font, make sure you have index.html loading the font from the google api */
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+  }
+  
+  .temperature-loading {
+    font-size: 24px;
+    color: #555;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Flashing effect */
+  .digital-temperature-display.flash .temperature-value {
+    animation: flash 0.5s ease-in-out infinite alternate;
+  }
+  
+  /* Define the flash animation */
+  @keyframes flash {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  

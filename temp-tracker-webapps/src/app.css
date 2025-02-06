@@ -1,0 +1,14 @@
+.App {
+    text-align: center;
+  }
+  
+  .app-container {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto; /* Centers the container */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
